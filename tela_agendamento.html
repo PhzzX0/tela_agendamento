@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museu do Índio Luiza Cantofa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/logo_real.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    header { background-color: #56070C; color: #fff; }
+    header .user-icon { margin-right: 5px; }
+    .search-group { display: flex; align-items: center; background-color: #56070C; border: 1px solid #fff; border-radius: 25px; overflow: hidden; width: 200px; }
+    .search-group input { background-color: transparent; border: none; color: #fff; flex: 1; padding: 5px 10px; }
+    .search-group input::placeholder { color: #fff; }
+    .search-group button { background-color: transparent; border: none; color: #fff; padding: 5px 10px; }
+
+    .logo-circle { background-color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; padding: 3px; }
+    .logo-circle img { display: block; height: 70px; }
+
+    nav { background-color: #56070C; }
+    nav .nav-link { margin: 0 15px; }
+
+    section.form-section { background-color: #CFCFCF; padding: 60px 50px; border-radius: 5px; max-width: 700px; margin: auto; }
+    .form-control { height: 55px; }
+    .btn-outline-primary { border: 1px solid #000 !important; color: #000 !important; background-color: #CFCFCF !important; padding-top: 6px; padding-bottom: 6px; margin-bottom: 12px; }
+    .btn-outline-primary:hover, .btn-check:checked + .btn-outline-primary { background-color: #989696 !important; }
+
+    .btn-agendar { background-color: #CFCFCF; color: #000; border: 1px solid #000; padding: 15px; display: block; width: 100%; margin-top: 30px; }
+    .btn-agendar:hover { background-color: #989696; }
+
+    .logo-circle-large { background-color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; padding: 1px; }
+    .logo-circle-large img { display: block; height: 90px; }
+
+    footer { background-color: #fff; color: #000; }
+    footer a { color: #000; text-decoration: none; }
+    footer hr { margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+
+<header class="py-2">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span><i class="bi bi-person-circle"></i> Bem-vindo, Usuário</span>
+    <div class="logo-circle">
+      <img src="/img/logo_real.png" alt="Logo Museu">
+    </div>
+    <form class="search-group">
+      <input type="search" class="form-control form-control-sm" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button type="submit"><i class="bi bi-search"></i></button>
+    </form>
+  </div>
+</header>
+
+<nav>
+  <div class="container text-center">
+    <ul class="nav justify-content-center py-2">
+      <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-house"></i> Início</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-bookmark"></i> Acervo</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-book"></i> História</a></li>
+      <li class="nav-item"><a class="nav-link active text-white" href="#"><i class="bi bi-calendar"></i> Visita</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="form-section container my-5">
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <h2 class="fw-bold fs-1">Agende sua visita</h2>
+      <p>Selecione data, horário e informe o nome, quantidade de visitantes e número para contato</p>
+    </div>
+    <div class="col-md-4 text-end">
+      <div class="logo-circle-large">
+        <img src="/img/logo_real.png" alt="Logo Museu">
+      </div>
+    </div>
+  </div>
+
+  <form>
+    <div class="mb-3">
+      <label for="data" class="form-label"><i class="bi bi-calendar-fill"></i> Data</label>
+      <input type="date" class="form-control" id="data" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label"><i class="bi bi-stopwatch-fill"></i> Horários</label>
+      <div class="row row-cols-2 row-cols-md-4 g-3">
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h08" value="08:00" required><label class="btn btn-outline-primary w-100">08:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h09" value="09:00"><label class="btn btn-outline-primary w-100">09:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h10" value="10:00"><label class="btn btn-outline-primary w-100">10:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h11" value="11:00"><label class="btn btn-outline-primary w-100">11:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h15" value="15:00"><label class="btn btn-outline-primary w-100">15:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h16" value="16:00"><label class="btn btn-outline-primary w-100">16:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h17" value="17:00"><label class="btn btn-outline-primary w-100">17:00</label></div>
+        <div class="col"><input type="radio" class="btn-check" name="horario" id="h18" value="18:00"><label class="btn btn-outline-primary w-100">18:00</label></div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-10">
+        <label for="nome" class="form-label"><i class="bi bi-person-bounding-box"></i> Nome e Quantidade</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      <div class="col-md-2">
+        <label for="quantidade" class="form-label"><i class="bi bi-people-fill"></i></label>
+        <input type="number" class="form-control" id="quantidade" min="1" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="telefone" class="form-label"><i class="bi bi-telephone-fill"></i> Contato</label>
+      <input type="tel" class="form-control" id="telefone" required>
+    </div>
+
+    <button type="submit" class="btn btn-agendar"><i class="bi bi-chat-fill"></i> Agendar</button>
+  </form>
+</section>
+
+<footer class="py-4">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-geo-alt-fill"></i> Visite-nos</h5>
+        <hr>
+        <p>Sítio Mansão I<br>1001 - Zona Rural<br>Apodi - RN</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-telephone-fill"></i> Contate-nos</h5>
+        <hr>
+        <p>(84) 0000-0000</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-share-fill"></i> Siga-nos</h5>
+        <hr>
+        <p><i class="fab fa-instagram"></i> Instagram<br><i class="fab fa-facebook"></i> Facebook</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
